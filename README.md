@@ -1,7 +1,7 @@
 # TCOS x LOVEiS Drink Service
-A drink ordering website for The Coming of Stages, built with **Next.js**, **TypeScript**, **MongoDB** and **Stripe**.
+A drink ordering website for The Coming of Stages, built with **Next.js**, **TypeScript**, and **MongoDB**.
 
-- **User Panel:** https://stagedrinks.vercel.app/
+- **User Panel:** https://stagedrinks.vercel.app
 - **Admin Panel:** https://stagedrinks.vercel.app/admin
 
 ## ⚙️ Tech Stack
