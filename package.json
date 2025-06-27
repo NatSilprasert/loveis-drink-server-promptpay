@@ -20,11 +20,12 @@
     "lucide-react": "^0.517.0",
     "mongoose": "^8.16.0",
     "next": "15.3.3",
+    "promptpay-qr": "^0.5.0",
+    "qrcode": "^1.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
-    "react-social-icons": "^6.24.0",
-    "stripe": "^18.2.1"
+    "react-social-icons": "^6.24.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

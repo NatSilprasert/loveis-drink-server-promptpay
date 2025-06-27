@@ -97,9 +97,16 @@ const Update = () => {
         }
         setOpenEdit("");
     }
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, []);
         
     return (
-        <div className={`${openEdit ? '' : 'hidden'} w-full top-1 z-100 p-6 absolute bg-white border m-auto`}>
+        <div className={`${openEdit ? '' : 'hidden'} bg-white border p-8 w-full mx-6 md:w-2/3 relative`}>
             <X onClick={() => setOpenEdit("")} className='absolute right-6'></X>
             <form onSubmit={updateProduct} className='flex flex-col w-full items-start gap-3'>
                 <div>

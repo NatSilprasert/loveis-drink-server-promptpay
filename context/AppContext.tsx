@@ -14,6 +14,10 @@ interface AppContextType {
     setLogin: React.Dispatch<React.SetStateAction<Login>>;
     showLogin: boolean;
     setShowLogin: React.Dispatch<React.SetStateAction<boolean>>;
+    showPayment: boolean;
+    setShowPayment: React.Dispatch<React.SetStateAction<boolean>>;
+    showSlip: string;
+    setShowSlip: React.Dispatch<React.SetStateAction<string>>;
     openEdit: string;
     setOpenEdit: React.Dispatch<React.SetStateAction<string>>;
     addToCart: (drink: Drink) => void;
@@ -78,9 +82,11 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
     // Admin
     const [adminToken, setAdminToken] = useState<string>('');
     const [openEdit, setOpenEdit] = useState<string>('');
+    const [showSlip, setShowSlip] = useState<string>('');
 
     const [login, setLogin] = useState<Login>({seat: 'guest', round: 'กรอกที่นั่ง'});
     const [showLogin, setShowLogin] = useState<boolean>(false);
+    const [showPayment, setShowPayment] = useState<boolean>(false);
     const [products, setProducts] = useState<Product[]>([]);
     const [cartItems, setCartItems] = useState<Drink[]>([]);
     const [orderItems, setOrderItems] = useState<object[]>([]);
@@ -233,7 +239,8 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
         adminToken, setAdminToken, openEdit, setOpenEdit,
         login, setLogin, showLogin, setShowLogin,
         addToCart, removeFromCart, getCartCount, getCartAmount,
-        cartItems, setCartItems, orderItems, setOrderItems
+        cartItems, setCartItems, orderItems, setOrderItems,
+        showPayment, setShowPayment, showSlip, setShowSlip
     };
 
     return (
@@ -242,3 +249,4 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
         </AppContext.Provider>
     );
 }
+

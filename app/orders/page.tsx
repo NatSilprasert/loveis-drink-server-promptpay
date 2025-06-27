@@ -48,7 +48,7 @@ const Orders = () => {
                   <div className='mt-4 flex justify-between'>
                       <div className='flex gap-4'>
                           <Image 
-                              src={item.imageUrl}
+                              src={item.imageUrl ? item.imageUrl : assets.empty}
                               alt="image" 
                               width={0} 
                               height={0} 

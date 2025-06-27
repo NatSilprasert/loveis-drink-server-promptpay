@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { Drink } from '@/context/AppContext';
+import { assets } from '@/assets/assets';
 
 const ProductItem = () => {
 
@@ -90,9 +91,9 @@ const ProductItem = () => {
         <div>
             <Navbar/>
             <div className='h-18 w-full'></div>
-            <ArrowLeft onClick={() => router.push('/')} className='absolute mx-2 mt-2 text-white'/>
+            <ArrowLeft onClick={() => router.push('/')} className='absolute mx-2 mt-2 text-black bg-white rounded-full p-1 w-8 h-8 border border-gray-300'/>
             <Image 
-                src={productData.imageUrl}
+                src={productData.imageUrl ? productData.imageUrl : assets.empty}
                 alt="image" 
                 width={0} 
                 height={0} 

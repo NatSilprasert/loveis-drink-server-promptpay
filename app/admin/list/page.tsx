@@ -69,8 +69,8 @@ const List = () => {
                       
                         {/* Edit Panel */}
                         {openEdit === item._id && ( 
-                            <div>
-                                <Update/>
+                            <div className="w-full fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+                                <Update />
                             </div>
                         )}
                       </div>
@@ -85,3 +85,4 @@ const List = () => {
 }
 
 export default List
+

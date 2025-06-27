@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Drink | The Coming of Stages",
+  title: "บริการสั่งเครื่องดื่ม | The Coming of Stages",
   description: "The Coming of Stages x Loveis Cafe Drink Order Platform",
   icons: {
     icon: "/tcos.png",

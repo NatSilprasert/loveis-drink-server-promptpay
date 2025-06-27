@@ -10,8 +10,10 @@ import order_icon from './order_icon.svg'
 import product_list_icon from './product_list_icon.svg'
 import upload_area from './upload_area.png'
 import cart_empty from './cart_empty.jpg'
+import empty from './empty.jpg'
 
 export const assets = {
+    empty,
     coffee,
     instagram,
     facebook,

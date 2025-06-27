@@ -5,7 +5,8 @@ const orderSchema = new mongoose.Schema({
     round: { type: String, required: true },
     amount: { type: Number, required: true },
     allOrder: { type: Array, required: true },
-    payment: { type: Boolean, require: true, default: false }, 
+    paymentInfo: { type: Object, required: true },
+    payment: { type: String, require: true, default: 'Unchecked' }, 
     status: { type: String, require: true, default: 'Order Placed' },
     date: { type: Number, require: true }, 
 })
