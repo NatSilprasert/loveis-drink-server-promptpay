@@ -20,6 +20,7 @@ const ProductItem = () => {
     const [request, setRequest] = useState<string>("");
     const [quantity, setQuantity] = useState<number>(1);
     const [bean, setBean] = useState('dark roast');
+    const [isAdding, setIsAdding] = useState(false);
 
     const addonPrices: { [key: string]: number } = {
         "shot dark": 20,
@@ -83,6 +84,15 @@ const ProductItem = () => {
             const filtered = prev.filter(item => item !== "dark roast" && item !== "medium roast");
             return [...filtered, name];
         });
+    };
+
+    const handleAddToCart = async (drink: Drink) => {
+        setIsAdding(true);
+        try {
+            await addToCart(drink);
+        } finally {
+            setIsAdding(false);
+        }
     };
 
     if (!productData) return <div className='w-full min-h-screen flex items-center justify-center'>Loading...</div>;
@@ -258,10 +268,14 @@ const ProductItem = () => {
                     <p className='font-medium'>{quantity}</p>
                     <SquarePlus onClick={() => increase()} className='text-black/80 w-8 h-8' />
                 </div>
-                <div onClick={() => addToCart(drink)} className='md:max-w-1/3 flex flex-1 justify-between p-4 bg-primary text-white font-medium rounded-lg'>
-                    <p>เพิ่มลงตะกร้า</p>
+                <button
+                    onClick={() => handleAddToCart(drink)}
+                    className='md:max-w-1/3 flex flex-1 justify-between p-4 bg-primary text-white font-medium rounded-lg disabled:opacity-60'
+                    disabled={isAdding}
+                >
+                    <p>{isAdding ? 'กำลังเพิ่มลงตะกร้า...' : 'เพิ่มลงตะกร้า'}</p>
                     <p>฿{getTotalPrice() * quantity}</p>
-                </div>
+                </button>
             </section>
         </div>
     )
