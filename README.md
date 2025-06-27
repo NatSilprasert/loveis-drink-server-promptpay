@@ -18,7 +18,7 @@ A drink ordering website for The Coming of Stages, built with **Next.js**, **Typ
   - 🛍️ Filter Products 
   - 🛒 Shopping Cart Features
   - 📦 Place Order Features
-  - 💲 Stripe Payment Features
+  - 💲 QR Payment Features
   - 📱 Mobile Responsive (best for mobile)
 
 - **Admin Features**
