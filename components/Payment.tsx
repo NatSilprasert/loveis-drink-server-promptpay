@@ -30,6 +30,10 @@ const Payment = ({amount}: {amount : number}) => {
     }
 
     const orderSubmitHandler = async () => {
+        if (!isFormValid) {
+            toast.error('กรุณากรอกข้อมูลให้ครบ');
+            return;
+        }
         setIsSubmitting(true);
         const { seat, round } = login;
         let orderItems = cartItems.map((item) => {
@@ -89,7 +93,8 @@ const Payment = ({amount}: {amount : number}) => {
         
     }, [showPayment]);
 
-    
+    // เช็คว่ากรอกข้อมูลครบหรือไม่
+    const isFormValid = username.trim() !== '' && time.trim() !== '' && slip !== null;
 
     return (
         <div className={`${showPayment ? 'flex' : 'hidden'} absolute  bg-primary/90 z-60  w-full h-screen items-center justify-center px-12`}>
