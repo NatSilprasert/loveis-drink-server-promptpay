@@ -37,7 +37,7 @@ const Payment = ({amount}: {amount : number}) => {
             return {
                 ...item,
                 name: product ? product.name : "",
-                price: product ? item.totalPrice / item.quantity : 0,
+                price: product ? item.price : 0,
                 imageUrl: product ? product.imageUrl : "",
             };
         });

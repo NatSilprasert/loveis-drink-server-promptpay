@@ -15,7 +15,7 @@ type OrderItem = {
   option?: string;
   addon: string[];
   request?: string;
-  totalPrice: number;
+  price: number;
 };
 
 const Orders = () => {
@@ -70,7 +70,7 @@ const Orders = () => {
                       </div>
                       
                       <div className='flex flex-col justify-between'>
-                          <p className='font-medium'>฿{item.totalPrice}</p> 
+                          <p className='font-medium'>฿{item.price * item.quantity}</p> 
                           <p></p>
                       </div> 
                          

@@ -55,7 +55,7 @@ export interface Product {
 }
 export interface Drink {
     productId: string;
-    totalPrice: number;
+    price: number;
     option: string;
     selectedTime: string;
     addon: string[];
@@ -227,7 +227,7 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
 
         let totalAmount = 0;
         for (const item of cartItems) {
-            totalAmount += item.totalPrice;
+            totalAmount += item.price * item.quantity;
         }
 
         return totalAmount

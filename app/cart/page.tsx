@@ -25,7 +25,7 @@ const Cart = () => {
             return {
                 ...item,
                 name: product ? product.name : "",
-                price: product ? item.totalPrice / item.quantity : 0,
+                price: product ? item.price : 0,
                 imageUrl: product ? product.imageUrl : "",
             };
         })
@@ -88,7 +88,7 @@ const Cart = () => {
                                 </div>
 
                                 <div className='flex flex-col justify-between'>
-                                    <p className='font-medium'>฿{item.totalPrice}</p> 
+                                    <p className='font-medium'>฿{item.price * item.quantity}</p> 
                                     <div className='justify-end flex'>
                                         <Trash2 onClick={() => removeFromCart(item)} />     
                                     </div>

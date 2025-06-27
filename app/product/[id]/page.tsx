@@ -34,7 +34,7 @@ const ProductItem = () => {
         if (!productData) return 0;
         const basePrice = Number(productData.price) || 0;
         const addonTotal = addon.reduce((sum, name) => sum + (addonPrices[name] || 0), 0);
-        return (basePrice + addonTotal) * quantity;
+        return (basePrice + addonTotal);
     };
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const ProductItem = () => {
 
     const drink: Drink = {
         productId: String(id),
-        totalPrice: getTotalPrice(),
+        price: getTotalPrice(),
         option,
         selectedTime,
         addon,
@@ -260,7 +260,7 @@ const ProductItem = () => {
                 </div>
                 <div onClick={() => addToCart(drink)} className='md:max-w-1/3 flex flex-1 justify-between p-4 bg-primary text-white font-medium rounded-lg'>
                     <p>เพิ่มลงตะกร้า</p>
-                    <p>฿{getTotalPrice()}</p>
+                    <p>฿{getTotalPrice() * quantity}</p>
                 </div>
             </section>
         </div>
