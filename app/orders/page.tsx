@@ -69,7 +69,10 @@ const Orders = () => {
                           </div>   
                       </div>
                       
-                      <p className='font-medium'>฿{item.totalPrice}</p> 
+                      <div className='flex flex-col justify-between'>
+                          <p className='font-medium'>฿{item.totalPrice}</p> 
+                          <p></p>
+                      </div> 
                          
                   </div>
                   <hr className='mt-4 text-gray-400/50'/>

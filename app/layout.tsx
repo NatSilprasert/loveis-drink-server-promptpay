@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "บริการสั่งเครื่องดื่ม | The Coming of Stages",
-  description: "The Coming of Stages x Loveis Cafe Drink Order Platform",
+  description: "สั่งเครื่องดื่มล่วงหน้าสำหรับ The Coming of Stages ร่วมกับ LOVEiS Cafe",
   icons: {
     icon: "/tcos.png",
   },
